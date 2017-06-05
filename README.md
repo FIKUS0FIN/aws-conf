@@ -4,7 +4,7 @@
 
  and for pure setup confluence i can get access to controle panel from localhost:8090
 
-+ more then 5 gb memory -- java + tomcat + confluence + nginx 
+more then 5 gb memory -- java + tomcat + confluence + nginx 
 
 	vagrant up --provision
 
@@ -40,7 +40,7 @@
 
 	 ssh -p 2222 -i nvi.pem -L 5432:localhost:5432 ubuntu@ec2-52-90-192-5.compute-1.amazonaws.com
 
-#ACCESS
+# ACCESS
 
 https://ec2-52-90-192-5.compute-1.amazonaws.com:4444/
 
@@ -54,9 +54,12 @@ https://ec2-52-90-192-5.compute-1.amazonaws.com:4444/
 	pass
 
 
-#for setup aws db for external world 
+# for setup aws db for external world 
+
 vim /etc/postgresql/9.5/main/postgresql.conf
+
 	edit to : listen_addresses = '*'
+
 vim  /etc/postgresql/9.5/main/pg_hba.conf
 
 	# TYPE  DATABASE        USER            ADDRESS                 METHOD
